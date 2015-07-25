@@ -4,7 +4,7 @@
  * Contains \Drupal\flag\Plugin\Action\Flag class.
  */
 
-namespace Drupal\flag\Plugin\Action;
+namespace Drupal\flag\Plugin\RulesAction;
 
 use Drupal\Core\Entity\Entity;
 use Drupal\flag\Entity\Flag as FlagEntity;

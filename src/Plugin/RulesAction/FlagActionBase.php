@@ -4,7 +4,7 @@
  * Contains \Drupal\flag\Plugin\Action\Base class.
  */
 
-namespace Drupal\flag\Plugin\Action;
+namespace Drupal\flag\Plugin\RulesAction;
 
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\flag\FlagService;

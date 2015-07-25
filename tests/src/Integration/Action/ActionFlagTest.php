@@ -8,7 +8,7 @@ namespace Drupal\Tests\flag\Integration\Action;
 
 /**
  * Tests Class for flag_action_flag rules action plugin.
- * @coversDefaultClass \Drupal\flag\Plugin\Action\Flag
+ * @coversDefaultClass \Drupal\flag\Plugin\RulesAction\Flag
  * @group flag_action
  */
 class ActionFlagTest extends FlagIntegrationTestBase {
