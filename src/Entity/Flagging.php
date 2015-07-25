@@ -35,7 +35,7 @@ use Drupal\flag\FlaggingInterface;
  *  bundle_entity_type = "flag",
  *  field_ui_base_route = "entity.flag.edit_form",
  *  links = {
- *    "delete-form" = "flag.confirm_unflag"
+ *    "delete-form" = "/flag.confirm_unflag"
  *  }
  * )
  */
