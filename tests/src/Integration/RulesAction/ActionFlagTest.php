@@ -1,17 +1,17 @@
 <?php
 /**
  * @file
- * Contains \Drupal\Tests\flag\Integration\Action\ActionUnFlagTest.
+ * Contains \Drupal\Tests\flag\Integration\Action\ActionFlagTest.
  */
 
-namespace Drupal\Tests\flag\Integration\Action;
+namespace Drupal\Tests\flag\Integration\RulesAction;
 
 /**
- * Tests Class for flag_action_unflag rules action plugin.
+ * Tests Class for flag_action_flag rules action plugin.
  * @coversDefaultClass \Drupal\flag\Plugin\RulesAction\Flag
  * @group flag_action
  */
-class ActionUnFlagTest extends FlagIntegrationTestBase {
+class ActionFlagTest extends FlagIntegrationTestBase {
 
   /**
    * Tests the summary.
@@ -22,9 +22,9 @@ class ActionUnFlagTest extends FlagIntegrationTestBase {
     $flagServiceMock = $this->getFlagServiceMock([]);
     $this->container->set('flag', $flagServiceMock);
 
-    $action = $this->getUnFlagAction();
+    $action = $this->getFlagAction();
 
-    $this->assertEquals('unflag entity', $action->summary());
+    $this->assertEquals('flag entity', $action->summary());
   }
 
   /**
@@ -37,14 +37,15 @@ class ActionUnFlagTest extends FlagIntegrationTestBase {
     $flagServiceMock = $this->getFlagServiceMock([]);
     $flagServiceMock
       ->expects($this->once())
-      ->method('unflag')
+      ->method('flag')
       ->will($this->returnValue([]));
     $this->container->set('flag', $flagServiceMock);
 
-
     $node = $this->getMock('Drupal\node\NodeInterface');
+
     $flag = $this->getFlagMock();
-    $action = $this->getUnFlagAction();
+
+    $action = $this->getFlagAction();
     $action->setContextValue('entity', $node);
     $action->setContextValue('flag', $flag);
     $action->execute();
@@ -55,8 +56,8 @@ class ActionUnFlagTest extends FlagIntegrationTestBase {
    *
    * @return object
    */
-  protected function getUnFlagAction() {
-    return $this->actionManager->createInstance('flag_action_unflag');
+  protected function getFlagAction() {
+    return $this->actionManager->createInstance('flag_action_flag');
   }
 
 }

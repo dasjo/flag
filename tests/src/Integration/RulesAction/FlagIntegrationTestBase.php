@@ -4,7 +4,7 @@
  * Contains \Drupal\Tests\flag\Integration\Action\Base.
  */
 
-namespace Drupal\Tests\flag\Integration\Action;
+namespace Drupal\Tests\flag\Integration\RulesAction;
 
 use Drupal\Tests\rules\Integration\RulesEntityIntegrationTestBase;
 

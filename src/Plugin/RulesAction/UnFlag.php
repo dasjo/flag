@@ -12,7 +12,7 @@ use Drupal\flag\Entity\Flag as FlagEntity;
 /**
  * Provides a generic 'unflag' action.
  *
- * @Action(
+ * @RulesAction(
  *   id = "flag_action_unflag",
  *   label = @Translation("Unflags the specifies the entity."),
  *   category = @Translation("Entity"),

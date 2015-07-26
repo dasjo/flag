@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Contains \Drupal\flag\Plugin\Action\Flag class.
+ * Contains \Drupal\flag\Plugin\RulesAction\Flag class.
  */
 
 namespace Drupal\flag\Plugin\RulesAction;
@@ -12,7 +12,7 @@ use Drupal\flag\Entity\Flag as FlagEntity;
 /**
  * Provides a generic 'flag' action.
  *
- * @Action(
+ * @RulesAction(
  *   id = "flag_action_flag",
  *   label = @Translation("Flags the specifies the entity."),
  *   category = @Translation("Entity"),
